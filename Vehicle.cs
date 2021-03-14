@@ -9,4 +9,14 @@ public class Vehicle
     {
         Console.WriteLine("Vrooom!");
     }
+
+    public virtual void Turn(string direction)
+    {
+        Console.WriteLine("turn right");
+    }
+
+    public virtual void Stop()
+    {
+        Console.WriteLine("screech");
+    }
 }

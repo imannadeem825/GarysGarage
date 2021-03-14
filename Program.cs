@@ -6,14 +6,6 @@ namespace GarysGarage
     {
         static void Main(string[] args)
         {
-            Zero fxs = new Zero();
-            Tesla modelS = new Tesla();
-            Cessna mx410 = new Cessna();
-
-            fxs.Drive();
-            modelS.Drive();
-            mx410.Drive();
-
             //create new vehicles
             Zero moto = new Zero()
             {
@@ -42,6 +34,13 @@ namespace GarysGarage
                 MainColor = "navy",
                 MaximumOccupancy = "3"
             };
+
+            moto.Drive();
+            plane.Drive();
+            elec.Drive();
+            truck.Drive();
+            
+            moto.Turn("left");
         }
     }
 }

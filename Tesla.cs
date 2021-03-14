@@ -11,6 +11,6 @@ public class Tesla : Vehicle // Electric car
 
     public override void Drive()
     {
-        Console.WriteLine("Mmmmmm!");
+        Console.WriteLine($"The {MainColor} Tesla drives past. Mmmmmm!");
     }
 }
