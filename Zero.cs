@@ -16,6 +16,11 @@ public class Zero : Vehicle // Electric motorcycle
 
     public override void Turn(string direction)
     {
-        Console.WriteLine($"The vehicle turns {direction}");
+        Console.WriteLine($"The vehicle squeals around, turning {direction}.");
+    }
+
+    public override void Stop()
+    {
+        Console.WriteLine($"The {MainColor} Zero screeches to a halt.");
     }
 }

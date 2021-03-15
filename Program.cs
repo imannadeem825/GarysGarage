@@ -14,12 +14,20 @@ namespace GarysGarage
                 MaximumOccupancy = "2"
             };
 
+            moto.Drive();
+            moto.Turn("left");
+            moto.Stop();
+
             Cessna plane = new Cessna()
             {
                 FuelCapacity = 5.5,
                 MainColor = "gray",
                 MaximumOccupancy = "40"
             };
+
+            plane.Drive();
+            plane.Turn("right");
+            plane.Stop();
 
             Tesla elec = new Tesla()
             {
@@ -28,6 +36,10 @@ namespace GarysGarage
                 MaximumOccupancy = "4"
             };
 
+            elec.Drive();
+            elec.Turn("left");
+            elec.Stop();
+
             Ram truck = new Ram()
             {
                 FuelCapacity = 20.5,
@@ -35,12 +47,9 @@ namespace GarysGarage
                 MaximumOccupancy = "3"
             };
 
-            moto.Drive();
-            plane.Drive();
-            elec.Drive();
             truck.Drive();
-            
-            moto.Turn("left");
+            truck.Turn("right");
+            truck.Stop();
         }
     }
 }
