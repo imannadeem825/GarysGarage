@@ -1,26 +1,39 @@
 using System;
 
-public class Tesla : Vehicle // Electric car
+namespace GarysGarage
 {
-    public double BatteryKWh { get; set; }
-
-    public void ChargeBattery()
+    public class Tesla : Vehicle, IElectricVehicle // Electric car
     {
-        // method definition omitted
+
+        public double BatteryKWh { get; set; }
+
+        public double CurrentChargePercentage { get; set; }
+        public void ChargeBattery()
+        {
+            // method definition omitted
+            CurrentChargePercentage = 100.00;
+            Console.WriteLine("Charging");
+        }
+
+        public override void Drive()
+        {
+            Console.WriteLine($"The {MainColor} Tesla drives past. Mmmmmm!");
+        }
+
+        public override void Turn(string direction)
+        {
+            Console.WriteLine($"The vehicle seems to glide around you, turning {direction}.");
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine($"The {MainColor} Tesla silently rolls to a stop.");
+        }
     }
 
-    public override void Drive()
+    internal interface IElectric
     {
-        Console.WriteLine($"The {MainColor} Tesla drives past. Mmmmmm!");
+        void ChargeBattery();
     }
 
-    public override void Turn(string direction)
-    {
-        Console.WriteLine($"The vehicle seems to glide around you, turning {direction}.");
-    }
-
-    public override void Stop()
-    {
-        Console.WriteLine($"The {MainColor} Tesla silently rolls to a stop.");
-    }
 }
